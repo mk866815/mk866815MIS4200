@@ -59,7 +59,7 @@ namespace mk866815MIS4200.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.courseID = new SelectList(db.Course, "CourseID", "courseName", grade.courseID);
+            ViewBag.courseID = new SelectList(db.Course, "courseID", "courseName", grade.courseID);
             ViewBag.studentID = new SelectList(db.Student, "studentID", "firstName", grade.studentID);
             return View(grade);
         }
@@ -76,7 +76,7 @@ namespace mk866815MIS4200.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.courseID = new SelectList(db.Course, "CourseID", "courseName", grade.courseID);
+            ViewBag.courseID = new SelectList(db.Course, "courseID", "courseName", grade.courseID);
             ViewBag.studentID = new SelectList(db.Student, "studentID", "firstName", grade.studentID);
             return View(grade);
         }
