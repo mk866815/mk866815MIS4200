@@ -9,7 +9,7 @@ namespace mk866815MIS4200.Models
     {
         public int CourseID { get; set; }
         public string courseName { get; set; }
-
+        public decimal courseSize { get; set; }
         public string courseDescription { get; set; }
 
         public ICollection<Grade> Grade { get; set; }
