@@ -10,7 +10,7 @@ namespace mk866815MIS4200.Models
     {
         [Key]
         public int gradeID { get; set; }
-        public  string grade { get; set; }
+        public  string courseGrade { get; set; }
 
         public DateTime gradeDate { get; set; }
 
