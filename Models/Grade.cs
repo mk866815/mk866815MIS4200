@@ -20,9 +20,11 @@ namespace mk866815MIS4200.Models
         [DisplayFormat(DataFormatString = "{0:d}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> gradeDate { get; set; }
 
+        [Display (Name = "Student")]
         public int studentID { get; set; }
         public virtual Student Student { get; set; }
 
+        [Display (Name = "Course")]
         public int courseID { get; set; }
         public virtual Course Course { get; set; }
 

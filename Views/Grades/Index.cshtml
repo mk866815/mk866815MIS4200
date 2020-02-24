@@ -4,18 +4,19 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Student Grades</h2>
+<h2>Student Grades <span class="glyphicon glyphicon-ok"></span></h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table table-bordered">
+    
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Course.courseName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Student.firstName)
+            @Html.DisplayNameFor(model => model.Student.fullName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.courseGrade)
@@ -26,26 +27,27 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Course.courseName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Student.firstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.courseGrade)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.gradeDate)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.gradeID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.gradeID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.gradeID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Course.courseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Student.fullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.courseGrade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gradeDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.gradeID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.gradeID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.gradeID })
+            </td>
+        </tr>
+    }
 
 </table>

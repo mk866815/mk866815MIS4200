@@ -10,6 +10,8 @@ namespace mk866815MIS4200.Models
     {
         public int studentID { get; set; }
 
+        //public string fullName { get { return lastName + ", " + firstName; } }
+
         [Display(Name = "First Name")]
         [Required(ErrorMessage = "Please Enter Student First Name")]
         [StringLength(40)]
@@ -56,7 +58,8 @@ namespace mk866815MIS4200.Models
         [StringLength(40)]
         public string studentGrade { get; set; }
 
-        public string fullName { get { return lastName + ", " + firstName; } } 
+        [Display (Name = "Student Name")]
+       public string fullName { get { return lastName + ", " + firstName; } } 
         public ICollection<Grade> Grade { get; set; }
     }
 }

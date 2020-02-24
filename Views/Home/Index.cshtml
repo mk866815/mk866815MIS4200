@@ -2,24 +2,37 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="label-warning">
-    <h1>Morgan Klimack</h1>
-    <p class="lead">Morgan Klimack is a senior at Ohio University. She is studying Management Information Systems and Marketing.</p>
-    <p><a href="http://www.instagram.com" class="btn btn-danger btn-lg">Follow Her &raquo;</a></p>
-</div>
+    <div class="label-warning">
+        <h1>Morgan Klimack</h1>
+        <p class="lead">Morgan Klimack is a senior at Ohio University. She is studying Management Information Systems and Marketing.<span class="glyphicon glyphicon-user"></span></p>
+        <p><a href="http://www.instagram.com" class="btn btn-danger btn-lg">Follow Her &raquo;</a></p>
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                Dropdown
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Grade", "Index", "Grades")</li>
+                <li>@Html.ActionLink("Courses", "Index", "Courses")</li>
+                <li>@Html.ActionLink("Students", "Index", "Students")</li>
+            </ul>
+        </div>
+    </div>
 
 <div class="row">
-    <div class="col-md-3">
+    <div class="alert-success">
         <h2>Hometown</h2>
         <p>
             Morgan grew up in a small town called Rocky River. It is a suburb on the west side of Cleveland, Ohio..
+            <span class="glyphicon glyphicon-home"></span>
         </p>
         <p><a class="btn btn-success" href="http://www.rrcity.com">Learn more about Rocky River &raquo;</a></p>
     </div>
-    <div class="col-md-6">
+    <div class="alert-danger">
         <h2>College Experience</h2>
-        <p>Morgan attends Ohio University and is in the College of Business. She is majoring in Management Information Systems and Marketing. She has been invovled in Alpha Xi Delta and was in Ohio Women in Business, until her junior year.</p>
-        <p><a class="btn btn-success" href="http://www.ohio.edu">Learn more about OU &raquo;</a></p>
+        <p>Morgan attends Ohio University and is in the College of Business. She is majoring in Management Information Systems and Marketing. She has been invovled in Alpha Xi Delta and was in Ohio Women in Business, until her junior year.
+            <span class="glyphicon glyphicon-book"></span></p>
+      <p><a class="btn btn-info" href="http://www.ohio.edu">Learn more about OU &raquo;</a></p>
         @Html.ActionLink("Student", "Index", "Students")
         <br />
         @Html.ActionLink("Grade", "Index", "Grades")
@@ -27,9 +40,10 @@
         @Html.ActionLink("Courses", "Index", "Courses")
        
     </div>
-    <div class="col-md-3">
+    <div class="alert-info">
         <h2>Future Job</h2>
         <p>Morgan has accepted a job working for Price WaterHouse Cooper in Cleveland, Ohio. She will be working in risk assurance. </p>
-        <p><a class="btn btn-success" href="http://www.pwc.com">Learn more about PwC &raquo;</a></p>
+        <p><span class="glyphicon glyphicon-signal"></span></p>
+        <p><a class="btn btn-primary" href="http://www.pwc.com">Learn more about PwC &raquo;</a></p>
     </div>
 </div>
