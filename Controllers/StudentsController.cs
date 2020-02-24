@@ -18,6 +18,7 @@ namespace mk866815MIS4200.Controllers
         // GET: Students
         public ActionResult Index()
         {
+
             return View(db.Student.ToList());
         }
 
@@ -47,7 +48,7 @@ namespace mk866815MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "studentID,firstName,lastName,email,studentGrade")] Student student)
+        public ActionResult Create([Bind(Include = "studentID,firstName,lastName,email,address,city,state,zipCode,phoneNumber,studentGrade")] Student student)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +80,7 @@ namespace mk866815MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "studentID,firstName,lastName,email,studentGrade")] Student student)
+        public ActionResult Edit([Bind(Include = "studentID,firstName,lastName,email,address,city,state,zipCode,phoneNumber,studentGrade")] Student student)
         {
             if (ModelState.IsValid)
             {
