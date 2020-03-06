@@ -25,7 +25,7 @@ textarea {
 
 .jumbotron {
     background-color: #10fbd5;
-    color: mediumvioletred;
+    color: yellow;
 }
 
 .navbar-inverse {
@@ -33,9 +33,13 @@ textarea {
 }
 
     .navbar-inverse .navbar-nav > li > a {
-        color: rebeccapurple;
+        color: blue;
     }
 
     .navbar-inverse .navbar-brand {
-        color: navy;
+        color: red;
+    }
+
+    .navbar-inverse .navbar-nav > li > a:hover {
+        color:yellow;
     }
